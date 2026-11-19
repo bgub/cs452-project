@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1770" viewBox="0 0 1800 1770">
+<rect x="0" y="0" width="1800" height="1770" rx="0" fill="#f3f6fa" stroke="none"/>
+<rect x="0" y="0" width="1800" height="170" rx="0" fill="#102738" stroke="none"/>
+<text x="60" y="48" fill="#75d9cd" font-size="15" font-weight="700" font-family="Inter, DejaVu Sans, sans-serif">OS2  /  DATA MODEL</text>
+<text x="60" y="103" fill="#ffffff" font-size="38" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">Personal OS · Entity Relationship Diagram</text>
+<text x="60" y="139" fill="#b5c8d6" font-size="18" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Current implementation  •  Convex persistence  •  CS 452 review draft</text>
+<text x="1370" y="51" fill="#8fa9ba" font-size="12" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">SCHEMA SNAPSHOT</text>
+<text x="1370" y="81" fill="#ffffff" font-size="18" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">garage @ 8c6a97c</text>
+<text x="60" y="210" fill="#167b78" font-size="15" font-weight="700" font-family="Inter, DejaVu Sans, sans-serif">01   APPLICATION DATA</text>
+<text x="60" y="241" fill="#334155" font-size="17" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Every row carries ownerId → authenticated identity (external Better Auth account).</text>
+<text x="60" y="266" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Ownership is one identity to many rows; repeated ownership lines are omitted for clarity.</text>
+<rect x="62" y="299" width="365" height="404" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="60" y="294" width="365" height="404" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="60" y="294" width="5" height="404" rx="2" fill="#167b78" stroke="none"/>
+<text x="82" y="325" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">osTodos</text>
+<text x="82" y="352" fill="#167b78" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + id</text>
+<path d="M80 368 H405" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="82" y="395" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="315" y="395" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="422" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">id</text>
+<text x="315" y="422" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="449" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">title</text>
+<text x="315" y="449" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="476" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">done</text>
+<text x="315" y="476" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">boolean</text>
+<text x="82" y="503" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">date?</text>
+<text x="315" y="503" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="530" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">position?</text>
+<text x="315" y="530" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<text x="82" y="557" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">depth?</text>
+<text x="315" y="557" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<text x="82" y="584" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">createdAt</text>
+<text x="315" y="584" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="611" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">revision</text>
+<text x="315" y="611" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<text x="82" y="638" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">deleted?</text>
+<text x="315" y="638" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">boolean</text>
+<text x="82" y="680" fill="#617385" font-size="13" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Hierarchy uses depth + position, not parentId.</text>
+<rect x="492" y="299" width="365" height="269" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="490" y="294" width="365" height="269" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="490" y="294" width="5" height="269" rx="2" fill="#167b78" stroke="none"/>
+<text x="512" y="325" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">osHabitDays</text>
+<text x="512" y="352" fill="#167b78" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + id</text>
+<path d="M510 368 H835" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="512" y="395" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="745" y="395" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="512" y="422" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">id</text>
+<text x="745" y="422" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="512" y="449" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">completed</text>
+<text x="745" y="449" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">boolean</text>
+<text x="512" y="476" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">revision</text>
+<text x="745" y="476" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<text x="512" y="503" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">deleted?</text>
+<text x="745" y="503" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">boolean</text>
+<text x="512" y="545" fill="#617385" font-size="13" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Daily identity encodes habit + date.</text>
+<rect x="922" y="299" width="365" height="268" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="920" y="294" width="365" height="268" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="920" y="294" width="5" height="268" rx="2" fill="#167b78" stroke="none"/>
+<text x="942" y="325" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">osJournals</text>
+<text x="942" y="352" fill="#167b78" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + id</text>
+<path d="M940 368 H1265" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="942" y="395" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="1175" y="395" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="942" y="422" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">id</text>
+<text x="1175" y="422" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="942" y="449" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">name</text>
+<text x="1175" y="449" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="942" y="476" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">createdAt</text>
+<text x="1175" y="476" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="942" y="503" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">revision</text>
+<text x="1175" y="503" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<text x="942" y="530" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">deleted?</text>
+<text x="1175" y="530" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">boolean</text>
+<rect x="1352" y="299" width="390" height="377" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="1350" y="294" width="390" height="377" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="1350" y="294" width="5" height="377" rx="2" fill="#167b78" stroke="none"/>
+<text x="1372" y="325" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">osJournalEntries</text>
+<text x="1372" y="352" fill="#167b78" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + id</text>
+<path d="M1370 368 H1720" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="1372" y="395" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="1630" y="395" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1372" y="422" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">id</text>
+<text x="1630" y="422" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1372" y="449" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">journalId</text>
+<text x="1630" y="449" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1372" y="476" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">date</text>
+<text x="1630" y="476" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1372" y="503" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">title</text>
+<text x="1630" y="503" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1372" y="530" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">content</text>
+<text x="1630" y="530" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1372" y="557" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">createdAt</text>
+<text x="1630" y="557" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1372" y="584" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">revision</text>
+<text x="1630" y="584" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<text x="1372" y="611" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">deleted?</text>
+<text x="1630" y="611" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">boolean</text>
+<text x="1372" y="653" fill="#617385" font-size="13" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">content stores serialized TipTap JSON.</text>
+<path d="M1102 562 V697 H1545 V671" fill="none" stroke="#167b78" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1115" y="589" fill="#167b78" font-size="14" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">0..1 journal</text>
+<text x="1558" y="692" fill="#167b78" font-size="14" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">0..* entries</text>
+<rect x="1186" y="680" width="233" height="30" rx="0" fill="#f3f6fa" stroke="none"/>
+<text x="1197" y="701" fill="#167b78" font-size="16" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">id ← journalId</text>
+<text x="920" y="737" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Logical reference within the same owner. Trash or unresolved</text>
+<text x="920" y="759" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">journal IDs are allowed; this is not an enforced foreign key.</text>
+<text x="60" y="807" fill="#4164b4" font-size="15" font-weight="700" font-family="Inter, DejaVu Sans, sans-serif">02   OFFLINE SYNCHRONIZATION</text>
+<rect x="62" y="837" width="440" height="187" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="60" y="832" width="440" height="187" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="60" y="832" width="5" height="187" rx="2" fill="#4164b4" stroke="none"/>
+<text x="82" y="863" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">osSyncStates</text>
+<text x="82" y="890" fill="#4164b4" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + collection</text>
+<path d="M80 906 H480" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="82" y="933" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="390" y="933" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="960" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">collection</text>
+<text x="390" y="960" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="987" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">revision</text>
+<text x="390" y="987" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<rect x="682" y="837" width="440" height="241" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="680" y="832" width="440" height="241" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="680" y="832" width="5" height="241" rx="2" fill="#4164b4" stroke="none"/>
+<text x="702" y="863" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">osSyncReceipts</text>
+<text x="702" y="890" fill="#4164b4" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + collection + key</text>
+<path d="M700 906 H1100" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="702" y="933" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="1010" y="933" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="702" y="960" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">collection</text>
+<text x="1010" y="960" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="702" y="987" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">key</text>
+<text x="1010" y="987" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="702" y="1014" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">content</text>
+<text x="1010" y="1014" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="702" y="1041" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">touched</text>
+<text x="1010" y="1041" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">boolean</text>
+<path d="M500 946 H680" fill="none" stroke="#4164b4" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="516" y="930" fill="#4164b4" font-size="14" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">0..1</text>
+<text x="628" y="930" fill="#4164b4" font-size="14" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">0..*</text>
+<text x="516" y="974" fill="#4164b4" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">same scope</text>
+<text x="1200" y="868" fill="#273e56" font-size="20" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">One sync scope per owner + collection</text>
+<text x="1200" y="905" fill="#334155" font-size="15" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">todos · habit-days · journals · journal-entries</text>
+<text x="1200" y="940" fill="#334155" font-size="16" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">revision identifies incremental changes.</text>
+<text x="1200" y="968" fill="#334155" font-size="16" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Receipts make retried writes idempotent.</text>
+<text x="1200" y="996" fill="#64748b" font-size="15" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">A state row can be absent before a change;</text>
+<text x="1200" y="1021" fill="#64748b" font-size="15" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">the protocol treats its revision as zero.</text>
+<text x="60" y="1131" fill="#8660a6" font-size="15" font-weight="700" font-family="Inter, DejaVu Sans, sans-serif">03   CHECKPOINT HISTORY</text>
+<rect x="62" y="1161" width="480" height="322" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="60" y="1156" width="480" height="322" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="60" y="1156" width="5" height="322" rx="2" fill="#8660a6" stroke="none"/>
+<text x="82" y="1187" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">historyDrafts</text>
+<text x="82" y="1214" fill="#8660a6" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + key</text>
+<path d="M80 1230 H520" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="82" y="1257" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="430" y="1257" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="1284" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">collection</text>
+<text x="430" y="1284" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="1311" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">key</text>
+<text x="430" y="1311" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="1338" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">name?</text>
+<text x="430" y="1338" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="1365" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">parent?</text>
+<text x="430" y="1365" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="1392" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">root?</text>
+<text x="430" y="1392" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="82" y="1419" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">cursor</text>
+<text x="430" y="1419" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<text x="82" y="1446" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">expectedRevision</text>
+<text x="430" y="1446" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<rect x="662" y="1161" width="480" height="295" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="660" y="1156" width="480" height="295" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="660" y="1156" width="5" height="295" rx="2" fill="#8660a6" stroke="none"/>
+<text x="682" y="1187" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">historyCommits</text>
+<text x="682" y="1214" fill="#8660a6" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + key</text>
+<path d="M680 1230 H1120" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="682" y="1257" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="1030" y="1257" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="682" y="1284" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">collection</text>
+<text x="1030" y="1284" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="682" y="1311" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">key</text>
+<text x="1030" y="1311" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="682" y="1338" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">name?</text>
+<text x="1030" y="1338" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="682" y="1365" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">parent?</text>
+<text x="1030" y="1365" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="682" y="1392" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">root?</text>
+<text x="1030" y="1392" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="682" y="1419" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">revision</text>
+<text x="1030" y="1419" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">number</text>
+<rect x="1262" y="1161" width="480" height="215" rx="12" fill="#e4eaf0" stroke="none"/>
+<rect x="1260" y="1156" width="480" height="215" rx="12" fill="white" stroke="#d9e2ea"/>
+<rect x="1260" y="1156" width="5" height="215" rx="2" fill="#8660a6" stroke="none"/>
+<text x="1282" y="1187" fill="#102738" font-size="22" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">historyNodes</text>
+<text x="1282" y="1214" fill="#8660a6" font-size="13" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">LOGICAL KEY  ownerId + hash</text>
+<path d="M1280 1230 H1720" fill="none" stroke="#e5ebf0" stroke-width="2"/>
+<text x="1282" y="1257" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">ownerId</text>
+<text x="1630" y="1257" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1282" y="1284" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">hash</text>
+<text x="1630" y="1284" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1282" y="1311" fill="#263d50" font-size="16" font-weight="400" font-family="DejaVu Sans Mono, monospace">data</text>
+<text x="1630" y="1311" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">string</text>
+<text x="1282" y="1353" fill="#617385" font-size="13" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Immutable serialized tree nodes; shared by hash.</text>
+<path d="M1140 1302 H1260" fill="none" stroke="#8660a6" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1148" y="1286" fill="#8660a6" font-size="14" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">0..*</text>
+<text x="1212" y="1286" fill="#8660a6" font-size="14" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">0..1</text>
+<text x="1154" y="1330" fill="#8660a6" font-size="13" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">root → hash</text>
+<text x="1260" y="1408" fill="#8660a6" font-size="15" font-weight="600" font-family="Inter, DejaVu Sans, sans-serif">parent → another commit’s key (optional)</text>
+<text x="1260" y="1436" fill="#334155" font-size="15" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Each commit has at most one parent;</text>
+<text x="1260" y="1461" fill="#334155" font-size="15" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">a parent may have many child commits.</text>
+<text x="60" y="1515" fill="#64748b" font-size="15" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Drafts build checkpoints across bounded transactions; parent/root use the same references as commits.</text>
+<text x="60" y="1543" fill="#64748b" font-size="15" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">History currently snapshots todos. Tree data stores historical values and child hashes, not foreign keys to live todo rows.</text>
+<path d="M60 1582 H1740" fill="none" stroke="#d5dfe9" stroke-width="2"/>
+<text x="60" y="1618" fill="#102738" font-size="13" font-weight="700" font-family="Inter, DejaVu Sans, sans-serif">READING THIS DIAGRAM</text>
+<text x="60" y="1650" fill="#334155" font-size="16" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">?  Optional field     0..1  Zero or one     0..*  Zero or many     Dashed line  Application-level relationship</text>
+<text x="60" y="1682" fill="#64748b" font-size="15" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">Logical keys describe application identity and lookup indexes; Convex does not declare SQL-style unique constraints or foreign keys.</text>
+<text x="60" y="1710" fill="#64748b" font-size="14" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">All tables also have Convex _id and _creationTime fields (omitted). Client IndexedDB caches/outboxes and unrelated Garage tables are outside this ERD.</text>
+<text x="60" y="1740" fill="#6b7d8e" font-size="12" font-weight="400" font-family="Inter, DejaVu Sans, sans-serif">SOURCE  packages/os-db/convex/schema.ts · history/schema.ts · osSync.ts · osJournal.ts · history/commits.ts</text>
+</svg>
