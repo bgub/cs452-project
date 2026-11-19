@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1700" viewBox="0 0 2000 1700">
+<rect x="0" y="0" width="2000" height="1700" rx="0" fill="#f2f6fa" stroke="none"/>
+<rect x="0" y="0" width="2000" height="168" rx="0" fill="#102a3b" stroke="none"/>
+<text x="52" y="44" fill="#8be1d2" font-size="14" font-weight="700" font-family="DejaVu Sans">OS2  /  PROPOSED DATA MODEL</text>
+<text x="52" y="98" fill="#fff" font-size="36" font-weight="600" font-family="DejaVu Sans">One tree model. Server truth. Offline working state.</text>
+<text x="52" y="137" fill="#b4cad8" font-size="17" font-weight="400" font-family="DejaVu Sans">Persistent Merkle trees • Immutable nodes • Durable operation replay • Named checkpoints</text>
+<rect x="1730" y="39" width="216" height="35" rx="12" fill="#294758" stroke="none"/>
+<text x="1747" y="62" fill="#dcebf4" font-size="13" font-weight="600" font-family="DejaVu Sans">DESIGN · NOT BUILT</text>
+<rect x="32" y="195" width="952" height="1120" rx="18" fill="#eaf2f4" stroke="#d3e3e8"/>
+<rect x="1016" y="195" width="952" height="1120" rx="18" fill="#edf0f9" stroke="#d8dfef"/>
+<text x="56" y="233" fill="#187f80" font-size="18" font-weight="700" font-family="DejaVu Sans">01  CONVEX · AUTHORITATIVE</text>
+<text x="56" y="262" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">One head per owner + collection; old states survive through retained roots.</text>
+<text x="1040" y="233" fill="#426cba" font-size="18" font-weight="700" font-family="DejaVu Sans">02  INDEXEDDB · THREE STORES</text>
+<text x="1040" y="262" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">Owner-partitioned cache and edits; works without a network connection.</text>
+<rect x="58" y="304" width="418" height="288" rx="12" fill="#e1e8ef" stroke="none"/>
+<rect x="56" y="300" width="418" height="288" rx="12" fill="#fff" stroke="#d4dfe9"/>
+<rect x="56" y="300" width="5" height="288" rx="2" fill="#187f80" stroke="none"/>
+<text x="76" y="332" fill="#142d40" font-size="22" font-weight="600" font-family="DejaVu Sans">collectionHeads</text>
+<text x="76" y="358" fill="#187f80" font-size="12" font-weight="600" font-family="DejaVu Sans">LOGICAL KEY  ownerId + collection</text>
+<path d="M76 373 H454" fill="none" stroke="#e2eaf0" stroke-width="2"/>
+<text x="76" y="399" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">ownerId</text>
+<text x="352" y="399" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="76" y="426" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">collection</text>
+<text x="352" y="426" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="76" y="453" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">rootHash</text>
+<text x="352" y="453" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">hash | null</text>
+<text x="76" y="480" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">sequence</text>
+<text x="352" y="480" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">number</text>
+<text x="76" y="507" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">schemaVersion</text>
+<text x="352" y="507" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">number</text>
+<text x="76" y="538" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">sequence orders head changes.</text>
+<text x="76" y="562" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">rootHash identifies the complete current state.</text>
+<rect x="544" y="304" width="418" height="318" rx="12" fill="#e1e8ef" stroke="none"/>
+<rect x="542" y="300" width="418" height="318" rx="12" fill="#fff" stroke="#d4dfe9"/>
+<rect x="542" y="300" width="5" height="318" rx="2" fill="#187f80" stroke="none"/>
+<text x="562" y="332" fill="#142d40" font-size="22" font-weight="600" font-family="DejaVu Sans">checkpoints</text>
+<text x="562" y="358" fill="#187f80" font-size="12" font-weight="600" font-family="DejaVu Sans">LOGICAL KEY  ownerId + checkpointId</text>
+<path d="M562 373 H940" fill="none" stroke="#e2eaf0" stroke-width="2"/>
+<text x="562" y="399" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">ownerId</text>
+<text x="838" y="399" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="562" y="426" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">checkpointId</text>
+<text x="838" y="426" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">UUID</text>
+<text x="562" y="453" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">collection</text>
+<text x="838" y="453" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="562" y="480" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">name</text>
+<text x="838" y="480" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="562" y="507" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">rootHash</text>
+<text x="838" y="507" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">hash | null</text>
+<text x="562" y="534" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">sequence</text>
+<text x="838" y="534" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">number</text>
+<text x="562" y="561" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">createdAt</text>
+<text x="838" y="561" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">timestamp</text>
+<text x="562" y="592" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Pin an existing root; no snapshot-building draft.</text>
+<rect x="58" y="811" width="418" height="312" rx="12" fill="#e1e8ef" stroke="none"/>
+<rect x="56" y="807" width="418" height="312" rx="12" fill="#fff" stroke="#d4dfe9"/>
+<rect x="56" y="807" width="5" height="312" rx="2" fill="#187f80" stroke="none"/>
+<text x="76" y="839" fill="#142d40" font-size="22" font-weight="600" font-family="DejaVu Sans">treeNodes</text>
+<text x="76" y="865" fill="#187f80" font-size="12" font-weight="600" font-family="DejaVu Sans">LOGICAL KEY  ownerId + hash</text>
+<path d="M76 880 H454" fill="none" stroke="#e2eaf0" stroke-width="2"/>
+<text x="76" y="906" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">ownerId</text>
+<text x="352" y="906" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="76" y="933" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">hash</text>
+<text x="352" y="933" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">hash</text>
+<text x="76" y="960" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">schemaVersion</text>
+<text x="352" y="960" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">number</text>
+<text x="76" y="987" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">kind</text>
+<text x="352" y="987" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">branch | leaf</text>
+<text x="76" y="1014" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">data</text>
+<text x="352" y="1014" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">node payload</text>
+<text x="76" y="1045" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Branch: slots → child hashes.</text>
+<text x="76" y="1069" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Leaf: record IDs → complete record values.</text>
+<text x="76" y="1093" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Immutable; branches reference this same table.</text>
+<rect x="544" y="811" width="418" height="312" rx="12" fill="#e1e8ef" stroke="none"/>
+<rect x="542" y="807" width="418" height="312" rx="12" fill="#fff" stroke="#d4dfe9"/>
+<rect x="542" y="807" width="5" height="312" rx="2" fill="#187f80" stroke="none"/>
+<text x="562" y="839" fill="#142d40" font-size="22" font-weight="600" font-family="DejaVu Sans">syncReceipts</text>
+<text x="562" y="865" fill="#187f80" font-size="12" font-weight="600" font-family="DejaVu Sans">LOGICAL KEY  ownerId + collection + opId</text>
+<path d="M562 880 H940" fill="none" stroke="#e2eaf0" stroke-width="2"/>
+<text x="562" y="906" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">ownerId</text>
+<text x="838" y="906" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="562" y="933" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">collection</text>
+<text x="838" y="933" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="562" y="960" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">opId</text>
+<text x="838" y="960" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">UUID</text>
+<text x="562" y="987" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">change</text>
+<text x="838" y="987" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">operation</text>
+<text x="562" y="1014" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">touched</text>
+<text x="838" y="1014" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">boolean</text>
+<text x="562" y="1045" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Same opId + payload → acknowledge retry.</text>
+<text x="562" y="1069" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Different payload with same opId → reject.</text>
+<text x="562" y="1093" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Stored atomically with nodes and head update.</text>
+<path d="M265 588 V685 H350 V807" fill="none" stroke="#187f80" stroke-width="2" stroke-dasharray="6 5"/>
+<path d="M751 618 V685 H350" fill="none" stroke="#187f80" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="75" y="652" fill="#187f80" font-size="14" font-weight="600" font-family="DejaVu Sans">Head / checkpoint: 0..1 root</text>
+<text x="75" y="678" fill="#187f80" font-size="13" font-weight="400" font-family="DejaVu Sans">Node: 0..* incoming references</text>
+<text x="410" y="715" fill="#187f80" font-size="14" font-weight="600" font-family="DejaVu Sans">rootHash → hash</text>
+<text x="410" y="741" fill="#34495d" font-size="13" font-weight="400" font-family="DejaVu Sans">References stay within the same owner.</text>
+<text x="56" y="1202" fill="#187f80" font-size="14" font-weight="600" font-family="DejaVu Sans">All four tables belong to an authenticated owner.</text>
+<text x="56" y="1229" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">Receipts are scoped to the same owner + collection as the head.</text>
+<text x="56" y="1256" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">No live todo rows: records live in leaves. No per-record sync revisions.</text>
+<rect x="1042" y="304" width="418" height="315" rx="12" fill="#e1e8ef" stroke="none"/>
+<rect x="1040" y="300" width="418" height="315" rx="12" fill="#fff" stroke="#d4dfe9"/>
+<rect x="1040" y="300" width="5" height="315" rx="2" fill="#426cba" stroke="none"/>
+<text x="1060" y="332" fill="#142d40" font-size="22" font-weight="600" font-family="DejaVu Sans">scopes</text>
+<text x="1060" y="358" fill="#426cba" font-size="12" font-weight="600" font-family="DejaVu Sans">KEY  ownerId + collection</text>
+<path d="M1060 373 H1438" fill="none" stroke="#e2eaf0" stroke-width="2"/>
+<text x="1060" y="399" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">ownerId</text>
+<text x="1336" y="399" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="1060" y="426" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">collection</text>
+<text x="1336" y="426" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="1060" y="453" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">confirmedRoot</text>
+<text x="1336" y="453" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">hash | null</text>
+<text x="1060" y="480" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">confirmedSeq</text>
+<text x="1336" y="480" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">number</text>
+<text x="1060" y="507" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">schemaVersion</text>
+<text x="1336" y="507" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">number</text>
+<text x="1060" y="534" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">checkpoints</text>
+<text x="1336" y="534" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">metadata[]</text>
+<text x="1060" y="565" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Confirmed = fully downloaded server state.</text>
+<text x="1060" y="589" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Bounded checkpoint list; each listed tree is cached.</text>
+<rect x="1528" y="304" width="418" height="288" rx="12" fill="#e1e8ef" stroke="none"/>
+<rect x="1526" y="300" width="418" height="288" rx="12" fill="#fff" stroke="#d4dfe9"/>
+<rect x="1526" y="300" width="5" height="288" rx="2" fill="#426cba" stroke="none"/>
+<text x="1546" y="332" fill="#142d40" font-size="22" font-weight="600" font-family="DejaVu Sans">outbox</text>
+<text x="1546" y="358" fill="#426cba" font-size="12" font-weight="600" font-family="DejaVu Sans">KEY  ownerId + collection + localOrder</text>
+<path d="M1546 373 H1924" fill="none" stroke="#e2eaf0" stroke-width="2"/>
+<text x="1546" y="399" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">ownerId</text>
+<text x="1822" y="399" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="1546" y="426" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">collection</text>
+<text x="1822" y="426" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="1546" y="453" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">localOrder</text>
+<text x="1822" y="453" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">number</text>
+<text x="1546" y="480" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">opId</text>
+<text x="1822" y="480" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">UUID</text>
+<text x="1546" y="507" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">change</text>
+<text x="1822" y="507" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">operation</text>
+<text x="1546" y="538" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Ordered, durable insert / update / delete.</text>
+<text x="1546" y="562" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">opId remains stable across all retries.</text>
+<rect x="1042" y="811" width="418" height="312" rx="12" fill="#e1e8ef" stroke="none"/>
+<rect x="1040" y="807" width="418" height="312" rx="12" fill="#fff" stroke="#d4dfe9"/>
+<rect x="1040" y="807" width="5" height="312" rx="2" fill="#426cba" stroke="none"/>
+<text x="1060" y="839" fill="#142d40" font-size="22" font-weight="600" font-family="DejaVu Sans">nodes</text>
+<text x="1060" y="865" fill="#426cba" font-size="12" font-weight="600" font-family="DejaVu Sans">KEY  ownerId + hash</text>
+<path d="M1060 880 H1438" fill="none" stroke="#e2eaf0" stroke-width="2"/>
+<text x="1060" y="906" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">ownerId</text>
+<text x="1336" y="906" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">string</text>
+<text x="1060" y="933" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">hash</text>
+<text x="1336" y="933" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">hash</text>
+<text x="1060" y="960" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">schemaVersion</text>
+<text x="1336" y="960" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">number</text>
+<text x="1060" y="987" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">kind</text>
+<text x="1336" y="987" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">branch | leaf</text>
+<text x="1060" y="1014" fill="#294155" font-size="15" font-weight="400" font-family="DejaVu Sans Mono">data</text>
+<text x="1336" y="1014" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">node payload</text>
+<text x="1060" y="1045" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Same node format and hashes as the server.</text>
+<text x="1060" y="1069" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Caches confirmed and pinned checkpoint trees.</text>
+<text x="1060" y="1093" fill="#6a7d8d" font-size="13" font-weight="400" font-family="DejaVu Sans">Working nodes may remain in memory.</text>
+<rect x="1526" y="807" width="418" height="313" rx="12" fill="#e1e8f7" stroke="none"/>
+<text x="1546" y="841" fill="#426cba" font-size="13" font-weight="700" font-family="DejaVu Sans">DERIVED · NOT STORED</text>
+<text x="1546" y="877" fill="#142d40" font-size="23" font-weight="600" font-family="DejaVu Sans">Working state</text>
+<text x="1546" y="913" fill="#426cba" font-size="16" font-weight="600" font-family="DejaVu Sans">confirmed tree + ordered outbox</text>
+<text x="1546" y="950" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">Rebuild on startup; update in memory.</text>
+<text x="1546" y="978" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">Expose rows to the UI through TanStack DB.</text>
+<text x="1546" y="1017" fill="#426cba" font-size="13" font-weight="600" font-family="DejaVu Sans">Checkpoint metadata inside scopes:</text>
+<text x="1546" y="1044" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans Mono">id · name · rootHash · sequence</text>
+<text x="1546" y="1077" fill="#34495d" font-size="13" font-weight="400" font-family="DejaVu Sans">Publish only after its full tree is cached.</text>
+<text x="1546" y="1100" fill="#34495d" font-size="13" font-weight="400" font-family="DejaVu Sans">No separate availableOffline flag needed.</text>
+<path d="M1458 410 H1526" fill="none" stroke="#426cba" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1468" y="394" fill="#426cba" font-size="13" font-weight="600" font-family="DejaVu Sans">1</text>
+<text x="1472" y="437" fill="#426cba" font-size="13" font-weight="600" font-family="DejaVu Sans">0..*</text>
+<path d="M1249 615 V630 H1420 V750 H1350 V807" fill="none" stroke="#426cba" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1048" y="667" fill="#426cba" font-size="14" font-weight="600" font-family="DejaVu Sans">confirmedRoot + checkpoints[].rootHash</text>
+<text x="1048" y="695" fill="#426cba" font-size="13" font-weight="400" font-family="DejaVu Sans">Each pointer: 0..1 node; each node: 0..* refs</text>
+<text x="1048" y="727" fill="#34495d" font-size="13" font-weight="400" font-family="DejaVu Sans">All references use the same ownerId.</text>
+<text x="1040" y="1202" fill="#426cba" font-size="14" font-weight="600" font-family="DejaVu Sans">Three durable stores; no persisted workingRoot or separate checkpoint store.</text>
+<text x="1040" y="1229" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">Persist each edit in the outbox before considering it safely saved.</text>
+<text x="1040" y="1256" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">Confirm atomically: advance the cached baseline and remove acknowledged edits.</text>
+<rect x="32" y="1341" width="1936" height="146" rx="14" fill="#fff" stroke="#d7e1ea"/>
+<text x="56" y="1373" fill="#142d40" font-size="13" font-weight="700" font-family="DejaVu Sans">HOW THE TWO SIDES CONNECT</text>
+<text x="56" y="1408" fill="#426cba" font-size="13" font-weight="700" font-family="DejaVu Sans">CLIENT → SERVER</text>
+<text x="257" y="1408" fill="#34495d" font-size="16" font-weight="400" font-family="DejaVu Sans">Send operations + opIds. Server applies them to its latest root, never blindly installs a client root.</text>
+<text x="56" y="1442" fill="#187f80" font-size="13" font-weight="700" font-family="DejaVu Sans">SERVER → CLIENT</text>
+<text x="257" y="1442" fill="#34495d" font-size="16" font-weight="400" font-family="DejaVu Sans">Subscribe to head changes; fetch missing nodes by hash. Publish the new local state only when its required nodes are ready.</text>
+<path d="M52 1522 H1948" fill="none" stroke="#d5dfe8" stroke-width="2"/>
+<text x="52" y="1556" fill="#142d40" font-size="13" font-weight="700" font-family="DejaVu Sans">MODEL NOTES</text>
+<text x="52" y="1585" fill="#34495d" font-size="15" font-weight="400" font-family="DejaVu Sans">Dashed lines = logical references, not SQL foreign keys. Root null = empty collection. All hash lookups are owner-scoped.</text>
+<text x="52" y="1613" fill="#34495d" font-size="15" font-weight="400" font-family="DejaVu Sans">Node hashes cover a canonical, versioned payload. One node may have many parents; no parent pointer is stored.</text>
+<text x="52" y="1641" fill="#34495d" font-size="14" font-weight="400" font-family="DejaVu Sans">Garbage collection must retain server heads/checkpoints and client confirmed/offline-pinned roots. Merkle trees do not merge conflicts by themselves.</text>
+<text x="52" y="1675" fill="#738595" font-size="12" font-weight="400" font-family="DejaVu Sans">PROPOSAL  Based on OS2’s existing outbox, receipts, and immutable checkpoint trees. Names and fields above describe the proposed replacement architecture.</text>
+</svg>
